@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nautubone - Официална Промоция</title>
+    <style>
+        :root {
+            --primary-color: #b80f49; /* Magenta/Pink from header */
+            --secondary-color: #ffc107; /* Yellow from banners */
+            --dark-bg: #3d2330; /* Dark section background */
+            --text-color: #333333;
+            --light-bg: #f9f9f9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-bottom: 5px solid var(--secondary-color);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding-bottom: 30px;
+        }
+
+        .product-image {
+            flex: 1 1 40%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            border-radius: 10px;
+
+            padding: 10px;
+        }
+
+        .image-placeholder-text {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .product-details {
+            flex: 1 1 55%;
+            padding: 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .benefits {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .benefits li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .benefits li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        /* Offer Box */
+        .offer-box {
+            background-color: var(--secondary-color);
+            border: 2px solid #e0a800;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .price-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            font-size: 1.4rem;
+            color: #555;
+        }
+
+        .new-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .discount-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .cod-notice {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        /* CTA Button */
+        .cta-btn {
+            display: block;
+            width: 100%;
+            background-color: #ff9800; /* Orange for higher conversion */
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            border-radius: 8px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #e68a00;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.6);
+        }
+
+        /* Information Section for Google Ads Compliance */
+        .compliance-section {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-bg);
+            color: #ccc;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+            font-size: 0.85rem;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .disclaimer {
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+            .product-image, .product-details {
+                flex: 1 1 100%;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        САМО ДНЕС: 50% ОТСТЪПКА ЗА NAUTUBONE!
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <div class="product-image">
+                <!-- SUBSTITUA O SRC ABAIXO PELA SUA IMAGEM NO VISUAL STUDIO -->
+                <img src="produto Nautubone.png" alt="Nautubone Гел">
+            </div>
+
+            <div class="product-details">
+                <h1>Nautubone</h1>
+                <p class="subtitle">Оригинална формула с натурални съставки за вашия комфорт.</p>
+
+                <ul class="benefits">
+                    <li>Спомага за облекчаване на дискомфорта в тялото</li>
+                    <li>Формула на базата на активни растителни вещества</li>
+                    <li>Лесен и удобен за ежедневно нанасяне</li>
+                    <li>100% Оригинален продукт</li>
+                </ul>
+
+                <div class="offer-box">
+                    <div class="discount-badge">СПЕСТЕТЕ 50%</div>
+                    <div class="price-container">
+                        <span class="old-price">78 EUR</span>
+                        <span class="new-price">39 EUR</span>
+                    </div>
+                    <div class="cod-notice">
+                        📦 Плащане при доставка (COD) – Плащате, когато получите продукта!
+                    </div>
+                </div>
+
+                <a href="https://8cpwd.doctorleador.com/l/?sub1={gclid}" class="cta-btn" id="order-btn">Поръчай Сега</a>
+            </div>
+        </section>
+
+        <section class="compliance-section">
+            <strong>Защо да изберете нас?</strong><br>
+            Ние предлагаме 100% оригинални продукти. Доставката е бърза и сигурна, а плащането става само след преглед на пратката. Без скрити такси. 
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Политика за поверителност</a> | 
+            <a href="#">Общи условия</a> | 
+            <a href="#">Контакти</a>
+        </div>
+        <div class="disclaimer">
+            <p><strong>Отказ от отговорност:</strong> Този продукт е козметично средство и не е предназначен за диагностициране, лечение или предотвратяване на заболявания. Резултатите могат да варират при отделните потребители. Информацията на тази страница не замества професионален медицински съвет.</p>
+            <p>&copy; 2026 Nautubone. Всички права запазени.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
